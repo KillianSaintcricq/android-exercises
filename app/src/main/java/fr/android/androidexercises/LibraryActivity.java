@@ -21,6 +21,7 @@ public class LibraryActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Création d'un nouveau processus, nécessaire parce que l'on ne peut pas faire d'appel réseau dans le main thread (qui sert à dessiner l'écran)
         new Thread(new Runnable() {
             @Override
             public void run() {
