@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class LibraryActivity extends AppCompatActivity {
 
+    private static final int BOOK_ACTIVITY = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,8 @@ public class LibraryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Replace with startActivityForResult() to start BookActivity
-                Toast.makeText(LibraryActivity.this, R.string.toast_todo, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(LibraryActivity.this, R.string.toast_todo, Toast.LENGTH_SHORT).show();
+                startActivityForResult(new Intent(LibraryActivity.this, BookActivity.class), LibraryActivity.BOOK_ACTIVITY);
             }
         });
     }
@@ -33,6 +36,7 @@ public class LibraryActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO get back book name
+        Toast.makeText(LibraryActivity.this, (String) data.getExtras().get("BOOK_NAME"), Toast.LENGTH_SHORT).show();
     }
 
     @Override
