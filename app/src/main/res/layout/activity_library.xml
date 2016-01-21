@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/padding_layout"
     tools:context=".Library">
+
+    <TextView
+        android:id="@+id/left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/red"
+        android:padding="@dimen/text_padding"
+        android:text="@string/left_text" />
+
+    <TextView
+        android:id="@+id/below_left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_text"
+        android:background="@color/indigo"
+        android:padding="@dimen/text_padding"
+        android:text="@string/below_left_text" />
+
+    <TextView
+        android:id="@+id/right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/text_padding"
+        android:text="@string/right_text" />
+
+    <TextView
+        android:id="@+id/center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/deep_purple"
+        android:padding="@dimen/text_padding"
+        android:text="@string/center_text" />
+
+    <TextView
+        android:id="@+id/above_bottom_center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_center_text"
+        android:layout_centerHorizontal="true"
+        android:background="@color/blue"
+        android:padding="@dimen/text_padding"
+        android:text="@string/above_bottom_center_text" />
+
+    <TextView
+        android:id="@+id/bottom_center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/indigo"
+        android:padding="@dimen/text_padding"
+        android:text="@string/bottom_center_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_layout"
+        android:paddingBottom="@dimen/padding_layout"
+        android:layout_below="@id/below_left_text">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:padding="@dimen/text_padding"
+            android:text="Bonjour" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/indigo"
+            android:padding="@dimen/text_padding"
+            android:text="Madame" />
+
+    </LinearLayout>
 
 </RelativeLayout>
