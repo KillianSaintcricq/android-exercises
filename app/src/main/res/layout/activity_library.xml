@@ -26,6 +26,7 @@
         android:id="@+id/checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:saveEnabled="false"
         android:layout_margin="@dimen/padding"
         android:hint="@string/hint_message"/>
 
