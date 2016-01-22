@@ -1,5 +1,7 @@
 package fr.android.androidexercises;
 
+import android.widget.TextView;
+
 public class Book {
 
     public final String name;
